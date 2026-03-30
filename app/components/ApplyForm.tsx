@@ -19,9 +19,9 @@ export function ApplyForm() {
   return (
     <section id="apply" className="py-24 px-6 w-full flex justify-center border-t border-white/5 bg-zinc-950/20">
       <div className="max-w-4xl w-full flex flex-col md:flex-row gap-16 items-center">
-        
+
         <div className="flex-1 space-y-6">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -29,7 +29,7 @@ export function ApplyForm() {
           >
             Одоо <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">өргөдөл</span> гаргах
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -40,7 +40,7 @@ export function ApplyForm() {
           </motion.p>
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -68,12 +68,16 @@ export function ApplyForm() {
                   <input type="url" required className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition-colors" placeholder="https://github.com/..." />
                 </div>
                 <div>
+                  <label className="block text-sm font-medium text-zinc-400 mb-1">Таны хүсэж буй цалин</label>
+                  <input type="number" required className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 transition-colors" placeholder="1,500,000₮" />
+                </div>
+                <div>
                   <label className="block text-sm font-medium text-zinc-400 mb-1">CV / Анкет хавсаргах</label>
                   <div className="relative">
-                    <input 
-                      type="file" 
-                      required 
-                      accept=".pdf,.doc,.docx" 
+                    <input
+                      type="file"
+                      required
+                      accept=".pdf,.doc,.docx"
                       className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                       onChange={(e) => setFileName(e.target.files?.[0]?.name || "")}
                     />
